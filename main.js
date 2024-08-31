@@ -38,7 +38,6 @@ const direcitonalLightHelper = new THREE.DirectionalLightHelper(
   0xff0000
 );
 scene.add(direcitonalLightHelper);
-
 const pointLight = new THREE.PointLight(0xffffff, 1);
 scene.add(pointLight);
 pointLight.position.set(-2.78, 0.66, 5.25);
