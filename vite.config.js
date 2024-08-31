@@ -1,9 +1,16 @@
 import { defineConfig } from "vite";
-import path from "path";
+import alias from "@rollup/plugin-alias";
 
 export default defineConfig({
   base: "/threejs-camera/",
-  alias: {
-    three: path.resolve("./node_modules/three"),
-  },
+  plugins: [
+    alias({
+      entries: [
+        {
+          find: "three",
+          replacement: "node_modules/three/build/three.module.js",
+        },
+      ],
+    }),
+  ],
 });
